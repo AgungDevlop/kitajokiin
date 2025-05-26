@@ -1,5 +1,6 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
+import PostArticle from '../../components/PostArticle.tsx';
 const posts = await import('../../data/cardpost.json').then(module => module.default);
 
 // Ambil slug dari URL
@@ -61,25 +62,11 @@ export async function getStaticPaths() {
         />
         <p class="text-xs sm:text-sm text-gray-400 mb-4" data-aos="fade-up" data-aos-delay="200">{post.date}</p>
         <p class="text-sm sm:text-base text-gray-200 mb-6" data-aos="fade-up" data-aos-delay="300">{post.description}</p>
-        <div class="prose prose-invert text-gray-200" data-aos="fade-up" data-aos-delay="400">
-          <h2 class="text-xl sm:text-2xl font-[Playfair Display] text-yellow-400 mb-4">Detail Layanan</h2>
-          <p>
-            Kami menyediakan {post.title.toLowerCase()} dengan kualitas terbaik untuk memenuhi kebutuhan Anda. Tim profesional kami siap membantu Anda mencapai tujuan dengan solusi yang cepat, aman, dan terjangkau.
-          </p>
-          <ul class="list-disc pl-5 mb-4">
-            <li>Layanan cepat dan responsif</li>
-            <li>Hasil berkualitas tinggi</li>
-            <li>Dukungan pelanggan 24/7</li>
-            <li>Harga kompetitif</li>
-          </ul>
-          <p>
-            Hubungi kami sekarang untuk informasi lebih lanjut atau untuk memesan layanan ini!
-          </p>
-        </div>
+        <PostArticle client:load slug={slug} />
         <a
           href="/contact"
           class="inline-block bg-yellow-400 text-black px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-yellow-500 transition-colors duration-300 text-sm sm:text-base font-[Inter] mt-6"
-          data-aos="fade-up" data-aos-delay="500"
+          data-aos="fade-up" data-aos-delay="600"
         >
           Hubungi Kami
         </a>

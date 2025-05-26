@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "jasa-pembuatan-website-aplikasi",
+    "content": "<h2>Layanan Pembuatan Website</h2><p>Kami menawarkan solusi pengembangan website modern dengan teknologi terkini seperti React, Astro, dan Node.js. Cocok untuk bisnis, portofolio, atau aplikasi web.</p><ul><li>Desain responsif</li><li>Optimasi SEO</li><li>Integrasi API</li></ul>",
+    "author": "KitaJoki Team",
+    "publishedDate": "2025-05-26"
+  },
+  {
+    "slug": "desain-grafis-logo",
+    "content": "<h2>Desain Grafis Profesional</h2><p>Ciptakan identitas merek Anda dengan logo unik dan desain grafis berkualitas tinggi. Kami menggunakan Adobe Illustrator dan Figma untuk hasil terbaik.</p><ul><li>Logo kustom</li><li>Branding kit</li><li>Revisi tanpa batas</li></ul>",
+    "author": "KitaJoki Team",
+    "publishedDate": "2025-05-25"
+  },
+  {
+    "slug": "hosting-web-statis-dinamis",
+    "content": "<h2>Hosting Andal</h2><p>Hosting cepat untuk website statis (Astro, Gatsby) dan dinamis (WordPress, Laravel). Dilengkapi SSL gratis dan uptime 99.9%.</p><ul><li>Server cepat</li><li>Backup harian</li><li>Dukungan 24/7</li></ul>",
+    "author": "KitaJoki Team",
+    "publishedDate": "2025-05-24"
+  },
+  {
+    "slug": "perbaikan-bug-error",
+    "content": "<h2>Perbaikan Bug Cepat</h2><p>Atasi error pada website atau aplikasi Anda dengan tim ahli kami. Kami mendukung JavaScript, Python, PHP, dan lainnya.</p><ul><li>Debugging cepat</li><li>Laporan detail</li><li>Jaminan kualitas</li></ul>",
+    "author": "KitaJoki Team",
+    "publishedDate": "2025-05-23"
+  },
+  {
+    "slug": "desain-presentasi-ppt",
+    "content": "<h2>Presentasi Menarik</h2><p>Buat slide PowerPoint profesional untuk rapat, pitch, atau seminar. Desain kami modern dan mudah disesuaikan.</p><ul><li>Template kustom</li><li>Animasi halus</li><li>Desain interaktif</li></ul>",
+    "author": "KitaJoki Team",
+    "publishedDate": "2025-05-22"
+  },
+  {
+    "slug": "pengengolahan-data-machine-learning",
+    "content": "<h2>Analisis Data Canggih</h2><p>Layanan machine learning untuk prediksi, klasifikasi, dan analisis data menggunakan Python, TensorFlow, dan Pandas.</p><ul><li>Model kustom</li><li>Visualisasi data</li><li>Konsultasi AI</li></ul>",
+    "author": "KitaJoki Team",
+    "publishedDate": "2025-01-21"
+  },
+  {
+    "slug": "pembuatan-software-tools",
+    "content": "<h2>Software Kustom</h2><p>Kembangkan aplikasi desktop atau CLI tools dengan C#, Python, atau Java untuk kebutuhan bisnis Anda.</p><ul><li>Software efisien</li><li>Dokumentasi lengkap</li><li>Pemeliharaan</li></ul>",
+    "author": "KitaJoki Team",
+    "publishedDate": "2025-01-20"
+  }
+]
