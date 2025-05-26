@@ -1,17 +1,46 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+
+// Page-specific data
+const pageImage = '/kitajokiin/services-og.jpg';
+const pageKeywords = 'jasa website, aplikasi, desain, hosting, KitaJoki.in, teknologi, Indonesia';
+const pageStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Services | KitaJoki.in',
+  description: 'Layanan joki profesional dari KitaJoki.in untuk website, aplikasi, desain, dan lainnya.',
+  url: 'https://agungdevlop.github.io/kitajokiin/services',
+  provider: {
+    '@type': 'Organization',
+    name: 'KitaJoki.in',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://agungdevlop.github.io/kitajokiin/logo.png'
+    }
+  }
+};
 ---
 
 <MainLayout 
-  title="Services" 
-  description="Layanan joki profesional dari KitaJoki.in untuk game, tugas, dan lainnya."
+  title="Services"
+  description="Layanan joki profesional dari KitaJoki.in untuk website, aplikasi, desain, dan lainnya."
+  image={pageImage}
+  keywords={pageKeywords}
+  structuredData={pageStructuredData}
 >
-  <section class="py-8">
-    <h2 class="text-3xl font-bold text-center mb-4">Our Services</h2>
-    <ul class="list-disc pl-6">
-      <li>Joki Game: Mobile Legends, PUBG, Free Fire, dll.</li>
-      <li>Joki Tugas: Makalah, presentasi, atau proyek akademik.</li>
-      <li>Layanan Custom: Konsultasi untuk kebutuhan spesifik.</li>
-    </ul>
+  <section class="py-8 bg-black text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-[Playfair Display] text-yellow-400 text-center mb-6" data-aos="fade-up">Layanan Kami</h2>
+      <p class="text-lg text-gray-200 text-center mb-6" data-aos="fade-up" data-aos-delay="100">Beragam solusi digital untuk kebutuhan Anda.</p>
+      <ul class="list-disc pl-6 text-gray-200">
+        <li data-aos="fade-up" data-aos-delay="200">Jasa Pembuatan Website dan Aplikasi: Situs responsif dan aplikasi mobile.</li>
+        <li data-aos="fade-up" data-aos-delay="300">Desain Grafis dan Logo: Identitas merek yang kuat.</li>
+        <li data-aos="fade-up" data-aos-delay="400">Hosting Web: Cepat, aman, dan andal.</li>
+        <li data-aos="fade-up" data-aos-delay="500">Perbaikan Bug: Solusi cepat untuk error teknis.</li>
+        <li data-aos="fade-up" data-aos-delay="600">Desain Presentasi: Slide PPT profesional.</li>
+        <li data-aos="fade-up" data-aos-delay="700">Machine Learning: Analisis data canggih.</li>
+        <li data-aos="fade-up" data-aos-delay="800">Pembuatan Software: Tools kustom untuk bisnis.</li>
+      </ul>
+    </div>
   </section>
 </MainLayout>

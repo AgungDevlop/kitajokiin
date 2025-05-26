@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
-import PostArticle from '../../components/PostArticle.tsx';
-const posts = await import('../../data/cardpost.json').then(module => module.default);
+import PostArticle from '../../components/PostArticle.jsx';
+const posts = await import('../../data/postArticle.json').then(module => module.default);
 
 // Ambil slug dari URL
 const { slug } = Astro.params;
@@ -33,7 +33,7 @@ const pageStructuredData = {
 
 // Fungsi getStaticPaths untuk dynamic routes
 export async function getStaticPaths() {
-  const posts = await import('../../data/cardpost.json').then(module => module.default);
+  const posts = await import('../../data/postArticle.json').then(module => module.default);
   return posts.map(post => ({
     params: { slug: post.slug },
   }));
@@ -47,30 +47,5 @@ export async function getStaticPaths() {
   keywords={pageKeywords}
   structuredData={pageStructuredData}
 >
-  <section class="py-8 bg-black text-white">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <a href="/kitajokiin" class="inline-block text-yellow-400 hover:text-yellow-500 mb-6 text-sm sm:text-base font-[Inter] transition-colors duration-300" data-aos="fade-right">
-        ← Kembali ke Beranda
-      </a>
-      <div class="max-w-3xl mx-auto">
-        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-[Playfair Display] text-yellow-400 mb-4" data-aos="fade-up">{post.title}</h1>
-        <img
-          src={post.image}
-          alt={post.title}
-          class="w-full h-48 sm:h-64 lg:h-80 object-cover rounded-lg mb-6"
-          data-aos="fade-up" data-aos-delay="100"
-        />
-        <p class="text-xs sm:text-sm text-gray-400 mb-4" data-aos="fade-up" data-aos-delay="200">{post.date}</p>
-        <p class="text-sm sm:text-base text-gray-200 mb-6" data-aos="fade-up" data-aos-delay="300">{post.description}</p>
-        <PostArticle client:load slug={slug} />
-        <a
-          href="/contact"
-          class="inline-block bg-yellow-400 text-black px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-yellow-500 transition-colors duration-300 text-sm sm:text-base font-[Inter] mt-6"
-          data-aos="fade-up" data-aos-delay="600"
-        >
-          Hubungi Kami
-        </a>
-      </div>
-    </div>
-  </section>
+  <PostArticle client:load post={post} />
 </MainLayout>

@@ -1,44 +1,65 @@
 [
   {
+    "id": 1,
+    "title": "Jasa Pembuatan Website dan Aplikasi",
+    "image": "/kitajokiin/web-apk.jpg",
+    "date": "2025-05-26",
+    "description": "Buat website atau aplikasi modern dengan performa tinggi dan desain menarik.",
     "slug": "jasa-pembuatan-website-aplikasi",
-    "content": "<h2>Layanan Pembuatan Website</h2><p>Kami menawarkan solusi pengembangan website modern dengan teknologi terkini seperti React, Astro, dan Node.js. Cocok untuk bisnis, portofolio, atau aplikasi web.</p><ul><li>Desain responsif</li><li>Optimasi SEO</li><li>Integrasi API</li></ul>",
-    "author": "KitaJoki Team",
-    "publishedDate": "2025-05-26"
+    "content": "## Jasa Pembuatan Website dan Aplikasi Profesional\n\nDi **KitaJoki.in**, kami menawarkan **jasa pembuatan website dan aplikasi** yang dirancang untuk memenuhi kebutuhan bisnis Anda di era digital. Dibuat oleh **Agung Developer** bersama tim berpengalaman (**Agas, Wawan, Deva, Rifki, Rama, Odip**), layanan kami mencakup pengembangan situs web responsif, aplikasi mobile, dan platform e-commerce. Kami menggunakan teknologi terkini seperti **React**, **Node.js**, **Astro**, dan **Tailwind CSS** untuk memastikan performa cepat, desain menarik, dan pengalaman pengguna yang optimal.\n\n### Mengapa Memilih Kami?\n- **Desain Kustom**: Setiap proyek dirancang sesuai visi Anda, dengan fokus pada estetika dan fungsionalitas.\n- **Performa Tinggi**: Situs dan aplikasi kami dioptimalkan untuk kecepatan dan SEO, meningkatkan peringkat di Google.\n- **Responsivitas**: Kompatibel di semua perangkat, dari ponsel hingga desktop.\n- **Dukungan Penuh**: Konsultasi, pengembangan, pengujian, dan pemeliharaan berkelanjutan.\n\n### Proses Kerja Kami\n1. **Konsultasi**: Memahami kebutuhan dan tujuan bisnis Anda.\n2. **Desain**: Membuat mockup dan prototipe interaktif.\n3. **Pengembangan**: Membangun situs atau aplikasi dengan kode bersih.\n4. **Pengujian**: Memastikan tidak ada bug dan performa optimal.\n5. **Peluncuran**: Deploy ke server Anda dengan panduan lengkap.\n\n### Manfaat untuk Bisnis Anda\nDengan website atau aplikasi profesional, Anda dapat menjangkau lebih banyak pelanggan, meningkatkan kredibilitas, dan memperluas pasar di **Indonesia** dan global. Layanan kami cocok untuk UMKM, startup, hingga korporasi. Contohnya, situs e-commerce kami telah membantu klien meningkatkan penjualan hingga 40% dalam 3 bulan!\n\n**Mulai Sekarang!** Wujudkan kehadiran digital yang kuat dengan **KitaJoki.in**. Klik tombol **Hubungi Kami** untuk konsultasi gratis."
   },
   {
+    "id": 2,
+    "title": "Desain Grafis dan Logo",
+    "image": "/kitajokiin/logo-design.jpg",
+    "date": "2025-05-25",
+    "description": "Ciptakan identitas merek yang kuat dengan desain grafis dan logo profesional.",
     "slug": "desain-grafis-logo",
-    "content": "<h2>Desain Grafis Profesional</h2><p>Ciptakan identitas merek Anda dengan logo unik dan desain grafis berkualitas tinggi. Kami menggunakan Adobe Illustrator dan Figma untuk hasil terbaik.</p><ul><li>Logo kustom</li><li>Branding kit</li><li>Revisi tanpa batas</li></ul>",
-    "author": "KitaJoki Team",
-    "publishedDate": "2025-05-25"
+    "content": "## Desain Grafis dan Logo untuk Identitas Merek Anda\n\n**KitaJoki.in**, dipimpin oleh **Agung Developer** dan tim kreatif (**Agas, Wawan, Deva, Rifki, Rama, Odip**), menyediakan **jasa desain grafis dan logo** untuk membangun identitas merek yang kuat dan memorable. Dari logo perusahaan hingga materi pemasaran seperti brosur dan banner, kami menggunakan alat seperti **Adobe Illustrator**, **Photoshop**, dan **Figma** untuk menghasilkan desain yang menarik dan profesional.\n\n### Keunggulan Layanan Kami\n- **Kreativitas Unik**: Desain yang mencerminkan nilai dan visi merek Anda.\n- **Fleksibilitas**: Cocok untuk bisnis kecil, startup, atau korporasi.\n- **Revisi Tanpa Batas**: Kami memastikan Anda puas dengan hasil akhir.\n- **Waktu Cepat**: Proyek selesai tepat waktu tanpa mengorbankan kualitas.\n\n### Jenis Desain yang Kami Tawarkan\n- **Logo**: Desain logo minimalis, modern, atau klasik.\n- **Materi Pemasaran**: Brosur, flyer, kartu nama, dan banner digital.\n- **Desain Media Sosial**: Template untuk Instagram, LinkedIn, dan lainnya.\n- **UI/UX**: Antarmuka pengguna untuk website dan aplikasi.\n\n### Proses Desain Kami\n1. **Briefing**: Diskusi untuk memahami kebutuhan desain Anda.\n2. **Konsep**: Pembuatan sketsa dan ide awal.\n3. **Desain**: Pengembangan desain berdasarkan umpan balik Anda.\n4. **Finalisasi**: Penyempurnaan dan pengiriman file dalam format PNG, SVG, atau PDF.\n\n### Mengapa Desain Penting?\nLogo dan desain grafis yang profesional meningkatkan kepercayaan pelanggan dan membedakan Anda dari kompetitor. Di **Indonesia**, merek dengan identitas visual kuat cenderung menarik 30% lebih banyak pelanggan. Percayakan kebutuhan desain Anda kepada **KitaJoki.in** untuk hasil yang memukau.\n\n**Pesan Sekarang!** Mulai membangun merek Anda dengan desain berkualitas tinggi. Klik **Hubungi Kami** untuk konsultasi gratis."
   },
   {
+    "id": 3,
+    "title": "Hosting Web Statis dan Dinamis",
+    "image": "/kitajokiin/hosting.jpg",
+    "date": "2025-05-24",
+    "description": "Hosting cepat dan andal untuk website statis atau dinamis Anda.",
     "slug": "hosting-web-statis-dinamis",
-    "content": "<h2>Hosting Andal</h2><p>Hosting cepat untuk website statis (Astro, Gatsby) dan dinamis (WordPress, Laravel). Dilengkapi SSL gratis dan uptime 99.9%.</p><ul><li>Server cepat</li><li>Backup harian</li><li>Dukungan 24/7</li></ul>",
-    "author": "KitaJoki Team",
-    "publishedDate": "2025-05-24"
+    "content": "## Hosting Web Statis dan Dinamis Terbaik\n\n**KitaJoki.in**, dikembangkan oleh **Agung Developer** bersama tim (**Agas, Wawan, Deva, Rifki, Rama, Odip**), menawarkan **jasa hosting web statis dan dinamis** yang cepat, aman, dan terjangkau. Baik untuk situs berbasis **Astro**, **Hugo**, **WordPress**, atau **Laravel**, kami menyediakan infrastruktur cloud dengan uptime 99.9%, SSL gratis, dan skalabilitas untuk mendukung pertumbuhan bisnis Anda di **Indonesia**.\n\n### Fitur Hosting Kami\n- **Kecepatan Tinggi**: Server SSD dengan CDN untuk waktu muat cepat.\n- **Keamanan**: SSL, firewall, dan backup harian.\n- **Skalabilitas**: Mudah menambah sumber daya saat lalu lintas meningkat.\n- **Dukungan 24/7**: Tim teknis siap membantu kapan saja.\n\n### Jenis Hosting yang Tersedia\n- **Hosting Statis**: Ideal untuk situs portofolio atau blog dengan Astro atau Gatsby.\n- **Hosting Dinamis**: Mendukung CMS seperti WordPress atau aplikasi berbasis PHP.\n- **Hosting Khusus**: Server dedicated untuk proyek besar.\n\n### Mengapa Hosting Penting?\nWebsite yang lambat atau sering down dapat merusak pengalaman pengguna dan menurunkan peringkat SEO. Layanan hosting kami dioptimalkan untuk kecepatan dan keandalan, membantu Anda menarik lebih banyak pengunjung. Contohnya, klien kami di Jakarta melaporkan peningkatan 25% dalam konversi setelah beralih ke hosting kami.\n\n### Proses Kami\n1. **Konsultasi**: Memilih paket hosting sesuai kebutuhan.\n2. **Setup**: Konfigurasi server dan domain.\n3. **Migrasi**: Memindahkan situs Anda tanpa downtime.\n4. **Monitoring**: Pemantauan performa dan keamanan.\n\n**Mulai Sekarang!** Nikmati situs yang selalu online dengan **KitaJoki.in**. Klik **Hubungi Kami** untuk penawaran terbaik."
   },
   {
+    "id": 4,
+    "title": "Perbaikan Bug dan Error",
+    "image": "/kitajokiin/fix-bug.jpg",
+    "date": "2025-05-23",
+    "description": "Atasi bug dan error pada aplikasi atau website dengan solusi cepat.",
     "slug": "perbaikan-bug-error",
-    "content": "<h2>Perbaikan Bug Cepat</h2><p>Atasi error pada website atau aplikasi Anda dengan tim ahli kami. Kami mendukung JavaScript, Python, PHP, dan lainnya.</p><ul><li>Debugging cepat</li><li>Laporan detail</li><li>Jaminan kualitas</li></ul>",
-    "author": "KitaJoki Team",
-    "publishedDate": "2025-05-23"
+    "content": "## Perbaikan Bug dan Error Profesional\n\n**KitaJoki.in**, dibuat oleh **Agung Developer** dan tim (**Agas, Wawan, Deva, Rifki, Rama, Odip**), menyediakan **jasa perbaikan bug dan error** untuk website dan aplikasi. Bug seperti error JavaScript, masalah database, atau tampilan yang rusak dapat mengganggu operasi bisnis Anda. Kami menawarkan solusi cepat dan andal untuk memastikan aplikasi Anda berjalan lancar di **Indonesia** dan global.\n\n### Layanan Kami\n- **Debugging**: Mengidentifikasi akar masalah dengan alat seperti Chrome DevTools.\n- **Perbaikan Kode**: Memperbaiki bug di JavaScript, PHP, Python, dll.\n- **Optimasi**: Meningkatkan performa setelah perbaikan.\n- **Pengujian**: Memastikan tidak ada bug baru.\n\n### Mengapa Perbaikan Bug Penting?\nBug dapat menyebabkan kehilangan pelanggan dan penurunan pendapatan. Studi menunjukkan 70% pengguna meninggalkan situs dengan error teknis. Dengan tim kami, Anda mendapatkan solusi yang cepat dan tahan lama, meminimalkan downtime dan meningkatkan kepuasan pengguna.\n\n### Proses Perbaikan\n1. **Analisis**: Menelusuri log dan laporan error.\n2. **Diagnosis**: Mengidentifikasi penyebab bug.\n3. **Perbaikan**: Menerapkan solusi dengan kode bersih.\n4. **Pengujian**: Verifikasi di berbagai perangkat dan browser.\n5. **Laporan**: Dokumentasi masalah dan solusi.\n\n### Keunggulan Kami\n- **Kecepatan**: Mayoritas bug diperbaiki dalam 24 jam.\n- **Kualitas**: Tim berpengalaman dengan proyek di berbagai industri.\n- **Harga Terjangkau**: Solusi hemat untuk UMKM dan startup.\n\n**Jangan Biarkan Bug Menghambat!** Kembalikan performa aplikasi Anda dengan **KitaJoki.in**. Klik **Hubungi Kami** untuk konsultasi gratis."
   },
   {
+    "id": 5,
+    "title": "Desain Presentasi",
+    "image": "/kitajokiin/presentation.jpg",
+    "date": "2025-05-22",
+    "description": "Buat slide PPT yang menarik dan profesional untuk kebutuhan presentasi Anda.",
     "slug": "desain-presentasi-ppt",
-    "content": "<h2>Presentasi Menarik</h2><p>Buat slide PowerPoint profesional untuk rapat, pitch, atau seminar. Desain kami modern dan mudah disesuaikan.</p><ul><li>Template kustom</li><li>Animasi halus</li><li>Desain interaktif</li></ul>",
-    "author": "KitaJoki Team",
-    "publishedDate": "2025-05-22"
+    "content": "## Desain Presentasi PPT Profesional\n\n**KitaJoki.in**, dipimpin oleh **Agung Developer** bersama **Agas, Wawan, Deva, Rifki, Rama, Odip**, menawarkan **jasa desain presentasi** untuk membuat slide PowerPoint yang menarik dan profesional. Baik untuk pitch bisnis, seminar, atau pelatihan, kami menciptakan presentasi yang memukau dengan **PowerPoint**, **Canva**, dan **Figma**, meningkatkan dampak pesan Anda di **Indonesia**.\n\n### Keunggulan Layanan\n- **Desain Menarik**: Visual yang modern dan sesuai audiens.\n- **Konten Jelas**: Tata letak yang memudahkan pemahaman.\n- **Kustomisasi**: Disesuaikan dengan merek atau tema Anda.\n- **Pengiriman Cepat**: Selesai dalam waktu singkat.\n\n### Jenis Presentasi\n- **Bisnis**: Pitch deck untuk investor atau klien.\n- **Akademik**: Presentasi untuk kuliah atau seminar.\n- **Korporasi**: Laporan tahunan atau pelatihan karyawan.\n- **Kreatif**: Presentasi untuk acara atau promosi.\n\n### Proses Desain\n1. **Konsultasi**: Memahami tujuan dan audiens presentasi.\n2. **Konsep**: Membuat storyboard dan sketsa awal.\n3. **Desain**: Mengembangkan slide dengan visual dan animasi.\n4. **Revisi**: Menyesuaikan berdasarkan umpan balik.\n5. **Pengiriman**: File PPT, PDF, atau format lainnya.\n\n### Manfaat Presentasi Profesional\nSlide yang menarik meningkatkan keterlibatan audiens hingga 50%, menurut penelitian. Dengan desain kami, Anda dapat menyampaikan ide dengan percaya diri dan meninggalkan kesan mendalam. Cocok untuk UMKM, akademisi, atau profesional.\n\n**Buat Audiens Terkesan!** Hubungi **KitaJoki.in** untuk desain presentasi yang memikat. Klik **Hubungi Kami** untuk mulai."
   },
   {
-    "slug": "pengengolahan-data-machine-learning",
-    "content": "<h2>Analisis Data Canggih</h2><p>Layanan machine learning untuk prediksi, klasifikasi, dan analisis data menggunakan Python, TensorFlow, dan Pandas.</p><ul><li>Model kustom</li><li>Visualisasi data</li><li>Konsultasi AI</li></ul>",
-    "author": "KitaJoki Team",
-    "publishedDate": "2025-01-21"
+    "id": 6,
+    "title": "Pengolahan Data dan Machine Learning",
+    "image": "/kitajokiin/machine-learning.jpg",
+    "date": "2025-05-21",
+    "description": "Analisis data canggih dan solusi machine learning untuk bisnis Anda.",
+    "slug": "pengolahan-data-machine-learning",
+    "content": "## Pengolahan Data dan Machine Learning untuk Bisnis\n\n**KitaJoki.in**, diciptakan oleh **Agung Developer** dan tim (**Agas, Wawan, Deva, Rifki, Rama, Odip**), menyediakan **jasa pengolahan data dan machine learning** untuk mengubah data mentah menjadi wawasan berharga. Menggunakan **Python**, **TensorFlow**, **Pandas**, dan **Scikit-learn**, kami membantu bisnis di **Indonesia** membuat keputusan berbasis data, dari prediksi hingga otomatisasi.\n\n### Layanan Kami\n- **Analisis Data**: Visualisasi dan laporan dengan Matplotlib atau Power BI.\n- **Machine Learning**: Model untuk prediksi, klasifikasi, atau clustering.\n- **Pembersihan Data**: Menangani data yang hilang atau tidak konsisten.\n- **Konsultasi**: Strategi data untuk pertumbuhan bisnis.\n\n### Manfaat Machine Learning\nModel AI kami telah membantu klien meningkatkan efisiensi hingga 35%. Contohnya, prediksi penjualan untuk UMKM di Jakarta meningkatkan akurasi stok hingga 90%. Solusi kami cocok untuk e-commerce, keuangan, atau logistik.\n\n### Proses Kerja\n1. **Pengumpulan Data**: Mengidentifikasi sumber data Anda.\n2. **Pembersihan**: Memastikan data berkualitas tinggi.\n3. **Pemodelan**: Melatih model ML sesuai kebutuhan bisnis.\n4. **Implementasi**: Mengintegrasikan solusi ke sistem Anda.\n5. **Evaluasi**: Memantau performa model.\n\n### Keunggulan Kami\n- **Keahlian**: Tim berpengalaman di proyek AI besar.\n- **Kustomisasi**: Solusi disesuaikan dengan kebutuhan Anda.\n- **Harga Kompetitif**: Layanan terjangkau untuk UMKM.\n\n**Transformasi Digital Dimulai Sekarang!** Hubungi **KitaJoki.in** untuk konsultasi data gratis. Klik **Hubungi Kami** untuk memanfaatkan kekuatan data."
   },
   {
-    "slug": "pembuatan-software-tools",
-    "content": "<h2>Software Kustom</h2><p>Kembangkan aplikasi desktop atau CLI tools dengan C#, Python, atau Java untuk kebutuhan bisnis Anda.</p><ul><li>Software efisien</li><li>Dokumentasi lengkap</li><li>Pemeliharaan</li></ul>",
-    "author": "KitaJoki Team",
-    "publishedDate": "2025-01-20"
+    "id": 7,
+    "title": "Pembuatan Software dan Tools",
+    "image": "/kitajokiin/software-tools.jpg",
+    "date": "2025-01-20",
+    "description": "Kembangkan software atau tools khusus untuk kebutuhan Anda.",
+    "slug": "pembuatan-aplikasi-soft",
+    "content": "## Pembuatan Software dan Tools Khusus\n\n**KitaJoki.in**, dikembangkan oleh **Agung Developer** bersama tim (**Agas, Wawan, Deva, Rifki, Rama, Odip**), menawarkan **jasa pembuatan software dan tools** untuk mendukung operasi bisnis Anda. Dari software manajemen hingga alat otomatisasi, kami menggunakan teknologi seperti **Python**, **Java**, **C#**, dan **JavaScript** untuk menciptakan solusi yang efisien dan sesuai kebutuhan Anda di **Indonesia**.\n\n### Layanan Kami\n- **Software Kustom**: Aplikasi desktop, web, atau mobile sesuai spesifikasi Anda.\n- **Tools Otomatisasi**: Alat untuk mengurangi tugas manual dan meningkatkan produktivitas.\n- **Integrasi Sistem**: Menghubungkan software baru dengan sistem yang ada.\n- **Pemeliharaan**: Dukungan teknis dan pembaruan rutin.\n\n### Mengapa Software Kustom?\nSoftware yang dirancang khusus meningkatkan efisiensi hingga 40% dibandingkan solusi generik. Contohnya, tools manajemen inventaris kami telah membantu UMKM menghemat waktu hingga 20 jam per minggu. Cocok untuk bisnis kecil hingga perusahaan besar.\n\n### Proses Pengembangan\n1. **Konsultasi**: Memahami kebutuhan dan tujuan Anda.\n2. **Perancangan**: Membuat blueprint dan prototipe.\n3. **Pengembangan**: Membangun software dengan kode berkualitas.\n4. **Pengujian**: Memastikan fungsionalitas dan keandalan.\n5. **Peluncuran**: Implementasi dan pelatihan pengguna.\n\n### Keunggulan Kami\n- **Fleksibel**: Solusi disesuaikan dengan anggaran dan skala bisnis Anda.\n- **Berpengalaman**: Tim ahli di berbagai bahasa pemrograman.\n- **Dukungan Penuh**: Bantuan pasca-peluncuran untuk kelancaran operasi.\n\n**Wujudkan Solusi Teknologi Anda!** Hubungi **KitaJoki.in** untuk konsultasi gratis dan mulailah mengembangkan software impian Anda. Klik **Hubungi Kami** sekarang!"
   }
 ]
