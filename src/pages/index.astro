@@ -2,11 +2,42 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import PostCard from '../components/PostCard.jsx';
 const posts = await import('../data/cardpost.json').then(module => module.default);
+
+// Page-specific data
+const pageImage = 'https://placehold.co/1200x630?text=Welcome+to+KitaJoki.in';
+const pageKeywords = 'jasa website, aplikasi, desain grafis, hosting, machine learning, software, KitaJoki.in, jasa profesional, teknologi, Indonesia';
+const pageStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Home | KitaJoki.in',
+  description: 'KitaJoki.in - Jasa joki untuk profesional untuk website, aplikasi, desain, dan lainnya.',
+  url: 'https://agungdevlop.github.io/kitajokiin/',
+  publisher: {
+    '@type': 'Organization',
+    name: 'KitaJoki.in',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://agungdevlop.github.io/kitajokiin/logo.png'
+    }
+  },
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: posts.map((post, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: post.title,
+      url: `https://agungdevlop.github.io/kitajokiin/posts/${post.slug}`
+    }))
+  }
+};
 ---
 
 <MainLayout 
-  title="Home" 
+  title="Home"
   description="KitaJoki.in - Jasa joki untuk profesional untuk website, aplikasi, desain, dan lainnya."
+  image={pageImage}
+  keywords={pageKeywords}
+  structuredData={pageStructuredData}
 >
   <section class="py-8 bg-black text-white relative">
     <div class="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden" data-aos="fade-up">
@@ -23,7 +54,7 @@ const posts = await import('../data/cardpost.json').then(module => module.defaul
   </section>
 
   <section class="py-8 pb-12 bg-black text-white">
-    <h2 class="text-3xl font-semibold font-[Playfair Display] text-yellow-400 text-center mb-6" data-aos="fade-up">Layanan Kami</h2>
+    <h2 class="text-3xl font-semibold font-[Playfair Display] text-yellow-400 text-center mb-6" data-aos="fade-up">Layanan Teknik</h2>
     <p class="text-lg font-medium text-gray-300 text-center mb-6" data-aos="fade-up" data-aos-delay="100">Beragam solusi digital untuk kebutuhan Anda</p>
     <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
       {posts.map((post, index) => (

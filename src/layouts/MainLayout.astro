@@ -4,22 +4,84 @@ import Header from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 import AOSInitializer from '../components/AOSInitializer.jsx';
 
-const { title, description } = Astro.props;
+const { title, description, image, keywords, structuredData } = Astro.props;
+
+// Base URL for canonical and OG tags
+const baseUrl = 'https://agungdevlop.github.io';
+const basePath = '/kitajokiin';
+const currentUrl = `${baseUrl}${basePath}${Astro.url.pathname}`;
+
+// Default OG image (fallback if no image prop)
+const defaultOgImage = `${baseUrl}${basePath}/og-image.jpg`;
+const ogImage = image || defaultOgImage;
+
+// Default keywords (fallback if no keywords prop)
+const defaultKeywords = 'jasa website, desain grafis, hosting, perbaikan bug, presentasi, machine learning, software development, KitaJoki.in, teknologi, jasa profesional';
+const pageKeywords = keywords || defaultKeywords;
+
+// Default structured data (fallback if no structuredData prop)
+const defaultStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: `${title} | KitaJoki.in`,
+  description: description,
+  url: currentUrl,
+  publisher: {
+    '@type': 'Organization',
+    name: 'KitaJoki.in',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${baseUrl}${basePath}/logo.png`
+    }
+  }
+};
+const finalStructuredData = structuredData || defaultStructuredData;
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} | KitaJoki.in</title>
-    <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href={`https://agungdevlop.github.io/kitajokiin${Astro.url.pathname}`} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={pageKeywords} />
+    <meta name="author" content="KitaJoki.in" />
+    <meta name="theme-color" content="#000000" />
+
+    <title>{title} | KitaJoki.in</title>
+    <link rel="canonical" href={currentUrl} />
+
+    {/* Open Graph Tags */}
     <meta property="og:title" content={`${title} | KitaJoki.in`} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={`https://agungdevlop.github.io/kitajokiin${Astro.url.pathname}`} />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={`Image for ${title}`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="KitaJoki.in" />
+    <meta property="og:locale" content="id_ID" />
+
+    {/* Twitter Card Tags */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | KitaJoki.in`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={`Image for ${title}`} />
+    <meta name="twitter:site" content="@KitaJokiIn" />
+    <meta name="twitter:creator" content="@KitaJokiIn" />
+
+    {/* Favicon and Icons */}
+    <link rel="icon" type="image/x-icon" href={`${basePath}/favicon.ico`} />
+    <link rel="apple-touch-icon" sizes="180x180" href={`${basePath}/apple-touch-icon.png`} />
+    <link rel="manifest" href={`${basePath}/site.webmanifest`} />
+
+    {/* Fonts */}
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+
+    {/* Structured Data */}
+    <script type="application/ld+json" set:html={JSON.stringify(finalStructuredData)} />
   </head>
   <body class="bg-black text-white font-inter">
     <AOSInitializer client:load />

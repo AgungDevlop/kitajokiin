@@ -13,6 +13,23 @@ if (!post) {
   return Astro.redirect('/404');
 }
 
+// Page-specific data
+const pageKeywords = `${post.title.toLowerCase()}, jasa profesional, KitaJoki.in, teknologi, Indonesia`;
+const pageStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: post.title,
+  provider: {
+    '@type': 'Organization',
+    name: 'KitaJoki.in',
+    url: 'https://agungdevlop.github.io/kitajokiin',
+    logo: 'https://agungdevlop.github.io/kitajokiin/logo.png'
+  },
+  description: post.description,
+  url: `https://agungdevlop.github.io/kitajokiin/posts/${post.slug}`,
+  image: post.image
+};
+
 // Fungsi getStaticPaths untuk dynamic routes
 export async function getStaticPaths() {
   const posts = await import('../../data/cardpost.json').then(module => module.default);
@@ -25,6 +42,9 @@ export async function getStaticPaths() {
 <MainLayout 
   title={post.title}
   description={post.description}
+  image={post.image}
+  keywords={pageKeywords}
+  structuredData={pageStructuredData}
 >
   <section class="py-8 bg-black text-white">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
