@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          BASE_PATH: '/kitajoki'
+          BASE_PATH: '/kitajokiin'
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
