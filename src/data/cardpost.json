@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Jasa Pembuatan Website dan Aplikasi",
+    "image": "https://placehold.co/300x200?text=Web+Apk",
+    "date": "2025-05-26",
+    "description": "Buat website atau aplikasi modern dengan performa tinggi dan desain menarik.",
+    "slug": "jasa-pembuatan-website-aplikasi"
+  },
+  {
+    "id": 2,
+    "title": "Desain Grafis dan Logo",
+    "image": "https://placehold.co/300x200?text=Logo+Design",
+    "date": "2025-05-25",
+    "description": "Ciptakan identitas merek yang kuat dengan desain grafis dan logo profesional.",
+    "slug": "desain-grafis-logo"
+  },
+  {
+    "id": 3,
+    "title": "Hosting Web Statis dan Dinamis",
+    "image": "https://placehold.co/300x200?text=Hosting",
+    "date": "2025-05-24",
+    "description": "Hosting cepat dan andal untuk website statis atau dinamis Anda.",
+    "slug": "hosting-web-statis-dinamis"
+  },
+  {
+    "id": 4,
+    "title": "Perbaikan Bug dan Error",
+    "image": "https://placehold.co/300x200?text=Fix+Bug",
+    "date": "2025-05-23",
+    "description": "Atasi bug dan error pada aplikasi atau website dengan solusi cepat.",
+    "slug": "perbaikan-bug-error"
+  },
+  {
+    "id": 5,
+    "title": "Desain Presentasi",
+    "image": "https://placehold.co/300x200?text=Presentation",
+    "date": "2025-05-22",
+    "description": "Buat slide PPT yang menarik dan profesional untuk kebutuhan presentasi Anda.",
+    "slug": "desain-presentasi-ppt"
+  },
+  {
+    "id": 6,
+    "title": "Pengolahan Data dan Machine Learning",
+    "image": "https://placehold.co/300x200?text=Machine+Learning",
+    "date": "2025-05-21",
+    "description": "Analisis data canggih dan solusi machine learning untuk bisnis Anda.",
+    "slug": "pengolahan-data-machine-learning"
+  },
+  {
+    "id": 7,
+    "title": "Pembuatan Software dan Tools",
+    "image": "https://placehold.co/300x200?text=Software+Tools",
+    "date": "2025-05-20",
+    "description": "Kembangkan software atau tools khusus untuk kebutuhan Anda.",
+    "slug": "pembuatan-software-tools"
+  }
+]

@@ -15,9 +15,13 @@
     "@tailwindcss/vite": "^4.1.7",
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
+    "alpinejs": "^3.14.9",
+    "aos": "^2.3.4",
     "astro": "^5.8.0",
+    "framer-motion": "^12.13.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-helmet": "^6.1.0",
     "tailwindcss": "^4.1.7"
   },
   "devDependencies": {

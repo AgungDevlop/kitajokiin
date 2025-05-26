@@ -1,13 +1,20 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
+
 import tailwindcss from '@tailwindcss/vite';
-import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  integrations: [react(), sitemap()],
+  integrations: [react()],
+
+  // Pastikan output statis untuk GitHub Pages
   output: 'static',
+
+  // Ganti dengan URL GitHub Pages Anda
   site: 'https://agungdevlop.github.io',
-  base: '/kitajokiin', // Diperbaiki dari '/kitajokiin'
+
+  // Ganti dengan nama repository, misalnya '/my-astro-project'
+  base: '/kitajokiin',
+
   vite: {
     plugins: [tailwindcss()]
   }
