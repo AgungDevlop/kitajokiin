@@ -1,0 +1,70 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import PostCard from '../components/PostCard.jsx';
+import Banner from '../components/Banner.jsx';
+
+// Import astro.config.mjs to get base path
+import config from '../../astro.config.mjs';
+const { base: basePath } = config;
+
+const posts = await import('../data/cardpost.json').then(module => module.default);
+
+// Page-specific data
+const pageImage = `/welcome-og.jpg`; // Prefix dengan basePath
+const pageKeywords = 'jasa website, aplikasi, desain grafis, hosting, machine learning, software, KitaJoki.in, jasa profesional, teknologi, Indonesia';
+const pageStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Home | KitaJoki.in',
+  description: 'KitaJoki.in - Jasa joki untuk profesional untuk website, aplikasi, desain, dan lainnya.',
+  url: `${basePath}/`, // Gunakan basePath
+  publisher: {
+    '@type': 'Organization',
+    name: 'KitaJoki.in',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${basePath}/logo.png` // Gunakan basePath
+    }
+  },
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: posts.map((post, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: post.title,
+      url: `${basePath}/posts/${post.slug}` // Gunakan basePath
+    }))
+  }
+};
+---
+
+<MainLayout 
+  title="Home"
+  description="KitaJoki.in - Jasa joki untuk profesional untuk website, aplikasi, desain, dan lainnya."
+  image={pageImage}
+  keywords={pageKeywords}
+  structuredData={pageStructuredData}
+>
+  <Banner client:load />
+
+  <section class="py-8 pb-12 bg-black text-white">
+    <h2 class="text-3xl font-semibold font-[Playfair Display] text-yellow-400 text-center mb-6" data-aos="fade-up">Layanan Kami</h2>
+    <p class="text-lg font-medium text-gray-300 text-center mb-6" data-aos="fade-up" data-aos-delay="100">Beragam solusi digital untuk kebutuhan Anda</p>
+    <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
+      {posts.map((post, index) => (
+        <PostCard
+          client:load
+          id={post.id}
+          title={post.title}
+          image={post.image}
+          date={post.date}
+          description={post.description}
+          slug={post.slug}
+          basePath={basePath}
+          data-aos="fade-up"
+          data-aos-delay={`${200 + index * 100}`}
+        />
+      ))}
+    </div>
+  </section>
+</MainLayout>

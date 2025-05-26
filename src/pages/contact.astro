@@ -1,0 +1,27 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Kontak from '../components/Contact.jsx';
+import config from '../../astro.config.mjs';
+const { base: basePath } = config;
+const pageImage = `/contact-og.jpg`;
+const pageKeywords = 'kontak KitaJoki.in, hubungi jasa website, dukungan teknologi, Indonesia';
+const pageStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Contact | KitaJoki.in',
+  description: 'Hubungi KitaJoki.in untuk informasi lebih lanjut tentang layanan kami.',
+  url: `${basePath}/contact`,
+  publisher: {
+    '@type': 'Organization',
+    name: 'KitaJoki.in',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${basePath}/logo.png`
+    }
+  }
+};
+---
+
+<MainLayout title="Kontak" description="Hubungi KitaJoki.in untuk informasi lebih lanjut tentang layanan kami." image={pageImage} keywords={pageKeywords} structuredData={pageStructuredData}>
+  <Kontak client:load basePath={basePath} />
+</MainLayout>
