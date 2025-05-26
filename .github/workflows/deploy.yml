@@ -21,15 +21,14 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Diperbarui ke versi Node.js terbaru untuk Astro
+          node-version: '20' 
 
       - name: Install dependencies
-        run: npm ci # Menggunakan npm ci untuk instalasi lebih cepat dan konsisten
-
+        run: npm install 
       - name: Build project
         run: npm run build
         env:
-          BASE_PATH: '/kitajokiin' # Sesuai dengan nama repository
+          BASE_PATH: '/kitajokiin' 
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
@@ -54,8 +53,8 @@ jobs:
           path: ./dist
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          force_orphan: true
+          publish_branch: gh-pages
