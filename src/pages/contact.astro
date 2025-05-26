@@ -1,0 +1,14 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ContactForm from '../components/ContactForm.jsx';
+---
+
+<MainLayout 
+  title="Contact" 
+  description="Hubungi KitaJoki.in untuk pertanyaan atau pemesanan jasa joki."
+>
+  <section class="py-8">
+    <h2 class="text-3xl font-bold text-center mb-4">Get in Touch</h2>
+    <ContactForm client:load />
+  </section>
+</MainLayout>
