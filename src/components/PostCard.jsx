@@ -21,7 +21,7 @@ export default function PostCard({ id, title, image, date, description, slug }) 
         <p className="text-xs sm:text-sm text-gray-200 mb-2 line-clamp-2 sm:line-clamp-3">{description}</p>
       </div>
       <a
-        href={`kitajokiin/posts/${slug}`}
+        href={`/posts/${slug}`}
         className="absolute bottom-0 left-0 right-0 w-3/4 mx-auto bg-yellow-400 text-black px-2 py-1 sm:px-3 sm:py-1.5 rounded-full border-2 border-yellow-400 transform translate-y-1/2 z-20 hover:bg-yellow-500 transition-colors duration-300 text-xs sm:text-sm font-[Inter] text-center"
       >
         View
