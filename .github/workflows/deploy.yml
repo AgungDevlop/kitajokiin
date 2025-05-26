@@ -2,35 +2,60 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ['main']
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
-  contents: write # Memberikan izin menulis ke repository
+  contents: write # Izin untuk menulis ke branch gh-pages
 
 jobs:
-  build-and-deploy:
+  build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '20' # Diperbarui ke versi Node.js terbaru untuk Astro
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Install dependencies
+        run: npm ci # Menggunakan npm ci untuk instalasi lebih cepat dan konsisten
 
-      - name: Build
+      - name: Build project
         run: npm run build
         env:
-          BASE_PATH: '/kitajokiin'
+          BASE_PATH: '/kitajokiin' # Sesuai dengan nama repository
+
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-files
+          path: ./dist
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: production-files
+          path: ./dist
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v4 # Menggunakan versi terbaru
         with:
-          branch: gh-pages
-          folder: dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true # Menghapus riwayat branch gh-pages untuk build bersih
