@@ -9,7 +9,7 @@ const post = posts.find(post => post.slug === slug);
 if (!post) {
   return Astro.redirect(`${basePath}/404`);
 }
-const pageImage = `${basePath}${post.image.startsWith('/') ? '' : '/'}${post.image}`;
+const pageImage = `${post.image}`;
 const pageKeywords = `${post.title.toLowerCase()}, jasa profesional, KitaJoki.in, teknologi, Indonesia`;
 const pageStructuredData = {
   '@context': 'https://schema.org',

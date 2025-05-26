@@ -1,11 +1,12 @@
+import React from 'react';
+
 const Banner = () => {
   const headingText = "K I T A  J O K I  J A S A";
-
   return (
     <section className="py-10 bg-black text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-32 sm:h-48 lg:h-64 flex flex-col justify-center text-left" data-aos="fade-in">
+      <div className="container mx-auto px-2 sm:px-6 lg:px-8 min-h-32 sm:min-h-48 lg:min-h-64 flex flex-col justify-center text-left" data-aos="fade-in">
         <h1
-          className="text-4xl sm:text-5xl lg:text-6xl font-[Bebas Neue] font-bold tracking-normal mb-2 sm:mb-4 whitespace-pre"
+          className="text-2xl sm:text-4xl lg:text-5xl font-[Bebas Neue] font-bold tracking-wide whitespace-pre mb-2 sm:mb-4"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -20,7 +21,7 @@ const Banner = () => {
           ))}
         </h1>
         <p
-          className="text-base sm:text-lg lg:text-xl font-[Inter] text-gray-400 max-w-md"
+          className="text-sm sm:text-base lg:text-lg font-[Inter] text-gray-400 max-w-md"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -33,12 +34,12 @@ const Banner = () => {
           display: inline-block;
         }
         @keyframes colorChange {
-          0% { color: #FBBF24; } /* yellow-400 */
-          20% { color: #FFFFFF; } /* white */
-          40% { color: #D1D5DB; } /* gray-300 */
-          60% { color: #60A5FA; } /* soft blue */
-          80% { color: #F59E0B; } /* amber-500 */
-          100% { color: #93C5FD; } /* blue-300 */
+          0% { color: #FBBF24; }
+          20% { color: #FFFFFF; }
+          40% { color: #D1D5DB; }
+          60% { color: #60A5FA; }
+          80% { color: #F59E0B; }
+          100% { color: #93C5FD; }
         }
       `}</style>
     </section>

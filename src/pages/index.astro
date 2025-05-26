@@ -10,7 +10,7 @@ const { base: basePath } = config;
 const posts = await import('../data/cardpost.json').then(module => module.default);
 
 // Page-specific data
-const pageImage = `${basePath}/welcome-og.jpg`; // Prefix dengan basePath
+const pageImage = `/welcome-og.jpg`; // Prefix dengan basePath
 const pageKeywords = 'jasa website, aplikasi, desain grafis, hosting, machine learning, software, KitaJoki.in, jasa profesional, teknologi, Indonesia';
 const pageStructuredData = {
   '@context': 'https://schema.org',
