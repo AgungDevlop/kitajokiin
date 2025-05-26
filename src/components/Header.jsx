@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function Header() {
+export default function Header({ basePath = '/' }) {
   const [isOpen, setIsOpen] = useState(false);
-
+  const normalizedBasePath = basePath.startsWith('/') ? basePath : `/${basePath}`;
+  const cleanBasePath = normalizedBasePath.replace(/\/+$/, '');
   const menuVariants = {
-    closed: { opacity: 0, scale: 0.8, y: -100 },
-    open: { opacity: 1, scale: 1, y: 0 },
+    closed: { opacity: 0, scale: 0.8, y: -20 },
+    open: { opacity: 1, scale: 1, y: 0 }
   };
-
   const overlayVariants = {
     closed: { opacity: 0 },
-    open: { opacity: 1 },
+    open: { opacity: 1 }
   };
-
   return (
     <motion.header
       initial={{ opacity: 0, y: -50 }}
@@ -31,7 +30,7 @@ export default function Header() {
         </motion.h1>
         <nav className="hidden md:flex space-x-6">
           <motion.a
-            href="/"
+            href={`${cleanBasePath}/`}
             className="text-white hover:text-yellow-400 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
             transition={{ type: 'spring', stiffness: 300 }}
@@ -39,7 +38,7 @@ export default function Header() {
             Home
           </motion.a>
           <motion.a
-            href="/services"
+            href={`${cleanBasePath}/services`}
             className="text-white hover:text-yellow-400 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
             transition={{ type: 'spring', stiffness: 300 }}
@@ -47,7 +46,7 @@ export default function Header() {
             Services
           </motion.a>
           <motion.a
-            href="/about"
+            href={`${cleanBasePath}/about`}
             className="text-white hover:text-yellow-400 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
             transition={{ type: 'spring', stiffness: 300 }}
@@ -55,7 +54,7 @@ export default function Header() {
             About
           </motion.a>
           <motion.a
-            href="/contact"
+            href={`${cleanBasePath}/contact`}
             className="text-white hover:text-yellow-400 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
             transition={{ type: 'spring', stiffness: 300 }}
@@ -72,12 +71,9 @@ export default function Header() {
           </svg>
         </button>
       </div>
-
-      {/* Overlay dan Menu Pop-up */}
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Overlay */}
             <motion.div
               initial="closed"
               animate="open"
@@ -87,8 +83,6 @@ export default function Header() {
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
               onClick={() => setIsOpen(false)}
             />
-
-            {/* Menu Pop-up di pojok kanan atas dengan sedikit jarak */}
             <motion.div
               initial="closed"
               animate="open"
@@ -106,10 +100,10 @@ export default function Header() {
                 </svg>
               </button>
               <nav className="mt-4">
-                <a href="/" className="block py-1 px-2 text-white hover:bg-yellow-400 hover:text-black transition-colors duration-300">Home</a>
-                <a href="/services" className="block py-1 px-2 text-white hover:bg-yellow-400 hover:text-black transition-colors duration-300">Services</a>
-                <a href="/about" className="block py-1 px-2 text-white hover:bg-yellow-400 hover:text-black transition-colors duration-300">About</a>
-                <a href="/contact" className="block py-1 px-2 text-white hover:bg-yellow-400 hover:text-black transition-colors duration-300">Contact</a>
+                <a href={`${cleanBasePath}/`} className="block py-1 px-2 text-white hover:bg-yellow-400 hover:text-black transition-colors duration-300">Home</a>
+                <a href={`${cleanBasePath}/services`} className="block py-1 px-2 text-white hover:bg-yellow-400 hover:text-black transition-colors duration-300">Services</a>
+                <a href={`${cleanBasePath}/about`} className="block py-1 px-2 text-white hover:bg-yellow-400 hover:text-black transition-colors duration-300">About</a>
+                <a href={`${cleanBasePath}/contact`} className="block py-1 px-2 text-white hover:bg-yellow-400 hover:text-black transition-colors duration-300">Contact</a>
               </nav>
             </motion.div>
           </>

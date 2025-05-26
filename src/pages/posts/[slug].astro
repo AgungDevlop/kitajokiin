@@ -1,20 +1,15 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 import PostArticle from '../../components/PostArticle.jsx';
+import config from '../../../astro.config.mjs';
 const posts = await import('../../data/postArticle.json').then(module => module.default);
-
-// Ambil slug dari URL
+const { base: basePath } = config;
 const { slug } = Astro.params;
-
-// Cari post berdasarkan slug
 const post = posts.find(post => post.slug === slug);
-
-// Jika post tidak ditemukan, kembalikan 404
 if (!post) {
-  return Astro.redirect('/404');
+  return Astro.redirect(`${basePath}/404`);
 }
-
-// Page-specific data
+const pageImage = `${basePath}${post.image.startsWith('/') ? '' : '/'}${post.image}`;
 const pageKeywords = `${post.title.toLowerCase()}, jasa profesional, KitaJoki.in, teknologi, Indonesia`;
 const pageStructuredData = {
   '@context': 'https://schema.org',
@@ -23,29 +18,21 @@ const pageStructuredData = {
   provider: {
     '@type': 'Organization',
     name: 'KitaJoki.in',
-    url: 'https://agungdevlop.github.io/kitajokiin',
-    logo: 'https://agungdevlop.github.io/kitajokiin/logo.png'
+    url: `${basePath}/`,
+    logo: `${basePath}/logo.png`
   },
   description: post.description,
-  url: `https://agungdevlop.github.io/kitajokiin/posts/${post.slug}`,
-  image: post.image
+  url: `${basePath}/posts/${post.slug}`,
+  image: pageImage
 };
-
-// Fungsi getStaticPaths untuk dynamic routes
 export async function getStaticPaths() {
   const posts = await import('../../data/postArticle.json').then(module => module.default);
   return posts.map(post => ({
-    params: { slug: post.slug },
+    params: { slug: post.slug }
   }));
 }
 ---
 
-<MainLayout 
-  title={post.title}
-  description={post.description}
-  image={post.image}
-  keywords={pageKeywords}
-  structuredData={pageStructuredData}
->
-  <PostArticle client:load post={post} />
+<MainLayout title={post.title} description={post.description} image={pageImage} keywords={pageKeywords} structuredData={pageStructuredData}>
+  <PostArticle client:load post={post} basePath={basePath} />
 </MainLayout>

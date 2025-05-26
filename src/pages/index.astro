@@ -1,23 +1,29 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import PostCard from '../components/PostCard.jsx';
+import Banner from '../components/Banner.jsx';
+
+// Import astro.config.mjs to get base path
+import config from '../../astro.config.mjs';
+const { base: basePath } = config;
+
 const posts = await import('../data/cardpost.json').then(module => module.default);
 
 // Page-specific data
-const pageImage = '/kitajokiin/welcome-og.jpg';
+const pageImage = `${basePath}/welcome-og.jpg`; // Prefix dengan basePath
 const pageKeywords = 'jasa website, aplikasi, desain grafis, hosting, machine learning, software, KitaJoki.in, jasa profesional, teknologi, Indonesia';
 const pageStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   name: 'Home | KitaJoki.in',
   description: 'KitaJoki.in - Jasa joki untuk profesional untuk website, aplikasi, desain, dan lainnya.',
-  url: 'https://agungdevlop.github.io/kitajokiin/',
+  url: `${basePath}/`, // Gunakan basePath
   publisher: {
     '@type': 'Organization',
     name: 'KitaJoki.in',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://agungdevlop.github.io/kitajokiin/logo.png'
+      url: `${basePath}/logo.png` // Gunakan basePath
     }
   },
   mainEntity: {
@@ -26,7 +32,7 @@ const pageStructuredData = {
       '@type': 'ListItem',
       position: index + 1,
       name: post.title,
-      url: `https://agungdevlop.github.io/kitajokiin/posts/${post.slug}`
+      url: `${basePath}/posts/${post.slug}` // Gunakan basePath
     }))
   }
 };
@@ -39,19 +45,7 @@ const pageStructuredData = {
   keywords={pageKeywords}
   structuredData={pageStructuredData}
 >
-  <section class="py-8 bg-black text-white relative">
-    <div class="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden" data-aos="fade-up">
-      <img
-        src="/kitajokiin/banner.jpg"
-        alt="KitaJoki.in Banner"
-        class="w-full h-full object-cover object-center"
-      />
-      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center px-4">
-        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-[Playfair Display] text-yellow-400 mb-2 sm:mb-4" data-aos="fade-up" data-aos-delay="100">Welcome to KitaJoki.in</h1>
-        <p class="text-sm sm:text-lg lg:text-xl text-gray-200 max-w-md" data-aos="fade-up" data-aos-delay="200">Penyedia jasa profesional untuk website, aplikasi, desain, dan solusi teknologi.</p>
-      </div>
-    </div>
-  </section>
+  <Banner client:load />
 
   <section class="py-8 pb-12 bg-black text-white">
     <h2 class="text-3xl font-semibold font-[Playfair Display] text-yellow-400 text-center mb-6" data-aos="fade-up">Layanan Kami</h2>
@@ -66,6 +60,7 @@ const pageStructuredData = {
           date={post.date}
           description={post.description}
           slug={post.slug}
+          basePath={basePath}
           data-aos="fade-up"
           data-aos-delay={`${200 + index * 100}`}
         />

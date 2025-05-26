@@ -10,7 +10,7 @@ export default function Footer() {
       className="bg-black text-yellow-400 p-4 text-center border-t border-yellow-400"
     >
       <motion.p
-        className="text-sm font-sans"
+        className="text-sm font-[Inter]"
         whileHover={{ scale: 1.02 }}
         transition={{ type: 'spring', stiffness: 300 }}
       >
@@ -21,9 +21,7 @@ export default function Footer() {
         whileHover={{ scale: 1.02 }}
         transition={{ type: 'spring', stiffness: 300 }}
       >
-        Website created by{' '}
-        <span className="text-yellow-400">Agung Developer</span> and team:{' '}
-        <span className="text-white">Agas, Wawan, Deva, Rifki, Rama, Odip</span>.
+        Website created by <span className="text-yellow-400">Agung Developer</span> and team: <span className="text-white">Agas, Wawan, Deva, Rifki, Rama, Odip</span>.
       </motion.p>
     </motion.footer>
   );

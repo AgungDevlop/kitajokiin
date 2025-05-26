@@ -1,44 +1,27 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-
-// Page-specific data
-const pageImage = '/kitajokiin/contact-og.jpg';
+import Kontak from '../components/Contact.jsx';
+import config from '../../astro.config.mjs';
+const { base: basePath } = config;
+const pageImage = `${basePath}/contact-og.jpg`;
 const pageKeywords = 'kontak KitaJoki.in, hubungi jasa website, dukungan teknologi, Indonesia';
 const pageStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
   name: 'Contact | KitaJoki.in',
-  description: 'Hubungi KamiJoki.in untuk informasi lebih lanjut tentang layanan kami.',
-  url: 'https://agungdevlop.github.io/kitajokiin/contact',
+  description: 'Hubungi KitaJoki.in untuk informasi lebih lanjut tentang layanan kami.',
+  url: `${basePath}/contact`,
   publisher: {
     '@type': 'Organization',
     name: 'KitaJoki.in',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://agungdevlop.github.io/kitajokiin/logo.png'
+      url: `${basePath}/logo.png`
     }
   }
 };
 ---
 
-<MainLayout 
-  title="Contact"
-  description="Hubungi KamiJoki.in untuk informasi lebih lanjut tentang layanan kami."
-  image={pageImage}
-  keywords={pageKeywords}
-  structuredData={pageStructuredData}
->
-  <section class="py-8 bg-black text-white">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-3xl font-[Playfair Display] text-yellow-400 mb-6" data-aos="fade-up">Hubungi Kami</h1>
-      <p class="text-sm sm:text-base text-gray-200 mb-6" data-aos="fade-up" data-aos-delay="100">Segera hubungi kami untuk konsultasi atau pemesanan layanan.</p>
-      <a
-        href="/kitajokiin"
-        class="inline-block bg-yellow-400 text-black px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-yellow-500 transition-colors duration-300 text-sm sm:text-base font-[Inter]"
-        data-aos="fade-up" data-aos-delay="200"
-      >
-        Kembali ke Beranda
-      </a>
-    </div>
-  </section>
+<MainLayout title="Kontak" description="Hubungi KitaJoki.in untuk informasi lebih lanjut tentang layanan kami." image={pageImage} keywords={pageKeywords} structuredData={pageStructuredData}>
+  <Kontak client:load basePath={basePath} />
 </MainLayout>

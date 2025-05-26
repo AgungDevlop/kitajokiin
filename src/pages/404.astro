@@ -1,0 +1,36 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import config from '../../astro.config.mjs';
+const { base: basePath } = config;
+const title = "404 - Page Not Found";
+const description = "The page you're looking for doesn't exist. Return to KitaJoki.in's homepage to explore our services.";
+const keywords = "404, page not found, KitaJoki.in, jasa profesional, teknologi, Indonesia";
+const pageImage = `${basePath}/og-image.jpg`;
+const pageStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description: description,
+  url: `${basePath}/404`,
+  publisher: {
+    '@type': 'Organization',
+    name: 'KitaJoki.in',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${basePath}/logo.png`
+    }
+  }
+};
+---
+
+<MainLayout title={title} description={description} image={pageImage} keywords={keywords} structuredData={pageStructuredData}>
+  <section class="py-8 bg-black text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-[Playfair Display] text-yellow-400 mb-4" data-aos="fade-up">404 - Page Not Found</h1>
+        <p class="text-sm sm:text-base text-gray-200 mb-6" data-aos="fade-up" data-aos-delay="100">Oops, the page you're looking for doesn't exist.</p>
+        <a href={`${basePath}/`} class="inline-block bg-yellow-400 text-black px-4 py-2 sm:px-6 sm:py-3 rounded-full hover:bg-yellow-500 transition-colors duration-300 text-sm sm:text-base font-[Inter] font-semibold" data-aos="fade-up" data-aos-delay="200">Back to Home</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>

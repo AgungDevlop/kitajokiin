@@ -1,21 +1,25 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 
+// Import astro.config.mjs to get base path
+import config from '../../astro.config.mjs';
+const { base: basePath } = config;
+
 // Page-specific data
-const pageImage = '/kitajokiin/about-og.jpg';
+const pageImage = `${basePath}/about-og.jpg`; // Prefix dengan basePath
 const pageKeywords = 'tentang KitaJoki.in, jasa teknologi, tim profesional, Indonesia';
 const pageStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
   name: 'About | KitaJoki.in',
   description: 'Tentang KitaJoki.in, penyedia jasa teknologi terpercaya di Indonesia.',
-  url: 'https://agungdevlop.github.io/kitajokiin/about',
+  url: `${basePath}/about`, // Gunakan basePath
   publisher: {
     '@type': 'Organization',
     name: 'KitaJoki.in',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://agungdevlop.github.io/kitajokiin/logo.png'
+      url: `${basePath}/logo.png` // Gunakan basePath
     }
   }
 };
